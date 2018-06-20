@@ -21,12 +21,12 @@ if (navigator.userAgent.match(/iPhone/i)) {
 function register($form) {
   $.ajax({
     type: $form.attr('method'),
-    url: $form.attr('action'),
+    url: 'https://mirtechlogistics.us18.list-manage.com/subscribe/post-json?u=4a067d0b648394dde59b052e6&amp;id=418330c4d5'+'&c=?',
     data: $form.serialize(),
     cache       : false,
-    dataType    : 'json',
-    contentType: "application/json; charset=utf-8",
-    error       : function(err) { $('#notification_container').html('<span class="alert">Could not connect to server. Please try again later.</span>'); },
+    dataType    : 'jsonp',
+    // contentType: "application/json; charset=utf-8",
+    error       : function() { $('#notification_container').html('<span class="alert">Could not connect to server. Please try again later.</span>'); },
     success     : function(data) {
      
     var message;
